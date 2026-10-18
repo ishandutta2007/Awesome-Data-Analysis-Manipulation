@@ -1,46 +1,51 @@
-# Awesome-Data-Analysis-Manipulation
+<div align="center">
 
-## Top Data Analysis & Manipulation Ecosystem
+# 📊 Awesome Data Analysis &amp; Manipulation
 
+[![Awesome Data Analysis & Manipulation Banner](assets/banner.svg)](https://github.com/ishandutta2007/Awesome-Data-Analysis-Manipulation)
 
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+[![GitHub stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Data-Analysis-Manipulation?style=social)](https://github.com/ishandutta2007/Awesome-Data-Analysis-Manipulation/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/ishandutta2007/Awesome-Data-Analysis-Manipulation?style=social)](https://github.com/ishandutta2007/Awesome-Data-Analysis-Manipulation/network/members)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ishandutta2007/Awesome-Data-Analysis-Manipulation/pulls)
+<a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
+**A definitive curated index of high-performance DataFrame libraries, in-memory analytical databases, visual ETL wrangling tools, and modern lakehouse platforms.**
 
-*Focused on Data Preparation, Transformation Pipelines & In-Memory Analytics*  
+*Optimized for Data Science • Analytics Engineering • High-Throughput In-Memory Compute • Visual Data Preparation*
 
-**Last updated: October 2026**
+**Last updated: October 2026** ⚡
 
+---
 
+</div>
 
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Data Analysis & Manipulation**. These tools enable analysts and engineers to clean, transform, join, and aggregate datasets—from visual ETL platforms that replace hand-coded scripts to in-process engines that process hundreds of millions of rows on a single machine without a cluster.
+## 📖 Introduction & Ecosystem Scope
 
+This repository provides an exhaustively researched catalog of top **SaaS platforms** and **open-source frameworks** tailored for **Data Analysis, Manipulation, Wrangling, and ETL Pipelines**. Whether managing hundreds of gigabytes on a single developer workstation without cluster overhead (via vectorization and lazy execution) or orchestrating multi-terabyte enterprise lakehouse pipelines, this guide benchmarks the leading commercial solutions and transparent open-source alternatives.
 
+- 🏢 **Enterprise SaaS Leaders**: AWS Glue DataBrew, Tableau Prep, Paxata, Databricks, Alteryx, Dataiku, Talend, Altair RapidMiner, Trifacta, and KNIME.
+- ⚡ **High-Speed Open-Source Engines**: Polars, DuckDB, Pandas, Apache Spark, Apache Arrow, marimo, dbt, Dask, OpenRefine, Great Expectations, Datasette, Modin, Mage, Vaex, Ibis, Daft, Rill, Fugue, and Amphi.
 
-**Examples** include Alteryx, KNIME, Dataiku, Trifacta, Talend, RapidMiner, Databricks, AWS Glue DataBrew, Tableau Prep, and Paxata (the category leaders).
+Contributions are warmly welcomed! Please read [How to Contribute](#-how-to-contribute) to add or update tools.
 
+## 📑 Table of Contents
 
+- [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [🏢 SaaS & Hosted Platforms](#-saas--hosted-platforms)
+- [⚡ Open-Source GitHub Projects](#-open-source-github-projects)
+  - [🛠️ Frameworks & Ecosystem Utilities](#️-frameworks--ecosystem-utilities)
+- [⭐ Star History](#-star-history)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚖️ Disclaimer](#️-disclaimer)
 
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, visual data preparation, and open analytical engines—ideal for data analysts, analytics engineers, and organizations seeking transparent, vendor-independent data manipulation.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## Sector Overview & Market Dynamics
+## 🌐 Sector Overview & Market Dynamics
 
 The global data preparation and manipulation software market is estimated at **$7.6B to $10.0B** in 2024–2026, compounding at a **15%–16% CAGR** driven by enterprise AI pipeline demands and data pipeline automation. The sector is **moderately fragmented**—dominated at the top by hyper-scalers and mega-cap enterprise analytics suites (AWS, Salesforce/Tableau, Workday, Databricks), yet continually disrupted by agile standalone visual ETL tools, modular lakehouse components, and fast-growing open-source ecosystems.
 
-## SaaS/Hosted Platforms
+## 🏢 SaaS & Hosted Platforms
 
 | Product | Company Size (Valuation / Revenue) | Starting Tier Pricing | Free Tier / Free Trial Limits | Description & Core Strengths |
 | :--- | :--- | :--- | :--- | :--- |
@@ -55,7 +60,7 @@ The global data preparation and manipulation software market is estimated at **$
 | **Trifacta** (Alteryx) | **~$400M Acquisition Valuation** (acquired by Alteryx in 2022) | Starts at **$80 / user/month** (Trifacta Starter Cloud edition) | **30-day free trial** of Trifacta Cloud with ML-guided wrangling and warehouse connector evaluation; no permanent free plan | Cloud-native data wrangling platform pioneering machine-learning-assisted transformation recommendations across modern cloud data warehouses. |
 | **KNIME** | **~$100M Valuation** (privately funded; ~$30M ARR) | **$99 / month** (KNIME Community Hub Team Plan, includes 3 members; +$49/mo per extra user) | **Free forever desktop version** (KNIME Analytics Platform: unrestricted nodes, local execution, unlimited rows, Python/R integration) | Open-core visual analytics suite with thousands of nodes, database connectors, and seamless scripting bridges for local or collaborative team ETL. |
 
-## Open-Source GitHub Projects
+## ⚡ Open-Source GitHub Projects
 
 Curated open-source repositories for data analysis, transformation, in-memory compute, and visual pipelines—ranked by GitHub star count:
 
@@ -119,14 +124,30 @@ Curated open-source repositories for data analysis, transformation, in-memory co
 - **[Loomflow](https://github.com/cardchase/loomflow)** [![GitHub stars](https://img.shields.io/github/stars/cardchase/loomflow?style=social&color=white)](https://github.com/cardchase/loomflow/stargazers)  
   **Self-hosted, lightweight, visual ETL platform inspired by Alteryx** (open-source) — **the open-source Alteryx alternative**. Features Alteryx-inspired configuration panels with tabular grids for managing hundreds of columns, tool containers for grouping/bypassing logic, multi-rule sorting and summarization powered by a native Polars backend, semantic type profiling, agent-ready YAML workflow exports, and an integrated Python IDE. **Best for**: teams looking for a visual Alteryx replacement backed by modern high-speed execution engines.
 
-### Frameworks & Ecosystem Utilities
+### 🛠️ Frameworks & Ecosystem Utilities
 
 - **[tidysheet](https://pypi.org/project/tidysheet/)** — Local-first data profiling and reproducible cleaning tool. Profiles messy CSV/Excel/Parquet files, generates human-auditable YAML cleaning pipelines executed via DuckDB, and reverse-engineers cleaning scripts directly from Excel edits.
 - **[Hermes](https://pypi.org/project/hermes-plt/)** — Local-first data provenance, lineage, and entity resolution framework designed to work seamlessly on top of Pandas, Polars, PyArrow, and DuckDB.
 
 **Frameworks for building custom systems**: Combine **Polars** or **Apache Spark** for high-performance DataFrame operations with **DuckDB** for SQL-heavy analytics, **Loomflow** or **Amphi** for visual pipeline building, **dbt** for warehouse transformations, **Great Expectations** for validation, and **Hermes** for provenance and lineage—creating a comprehensive data analysis and manipulation stack that handles everything from exploration to production.
 
-## How to Contribute
+## ⭐ Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Data-Analysis-Manipulation&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Data-Analysis-Manipulation&type=date&legend=top-left)
+
+## 💖 Support & Sponsorship
+
+Thank you so much for exploring and using **Awesome-Data-Analysis-Manipulation**! 🌟
+
+If you find this ecosystem guide helpful for your work, research, or data infrastructure, please consider supporting the project:
+- ⭐ **Star this repository** to support discovery and visibility!
+- 🍴 **Fork and contribute** by submitting new tools, benchmarks, or corrections.
+- 📢 **Share with your colleagues**, analytics teams, and communities on LinkedIn, X/Twitter, or Reddit.
+- ☕ **Buy me a coffee & sponsor my open-source work**: Support future updates, benchmarks, and curated repositories directly via the **[GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007)**!
+
+Every bit of encouragement and sponsorship keeps this curated knowledge base up to date and community-driven. 🙏
+
+## 🤝 How to Contribute
 
 
 
@@ -144,7 +165,7 @@ Star the repo if you find it useful!
 
 
 
-## Disclaimer
+## ⚖️ Disclaimer
 
 
 

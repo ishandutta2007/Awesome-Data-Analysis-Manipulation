@@ -57,89 +57,74 @@ The global data preparation and manipulation software market is estimated at **$
 
 ## Open-Source GitHub Projects
 
+Curated open-source repositories for data analysis, transformation, in-memory compute, and visual pipelines—ranked by GitHub star count:
 
+- **[Pandas](https://github.com/pandas-dev/pandas)** [![GitHub stars](https://img.shields.io/github/stars/pandas-dev/pandas?style=social&color=white)](https://github.com/pandas-dev/pandas/stargazers)  
+  **Flexible and powerful data analysis / manipulation library for Python** (BSD-3-Clause) — **the most widely used data manipulation library in the world**. **Key strengths**: **ubiquitous**—every data science tutorial starts with `import pandas as pd`; **rich ecosystem** (scikit-learn, matplotlib, seaborn all accept DataFrames); **full-featured** with merging, joining, grouping, pivoting, and time series. **The critical limitation**: **holds all data in RAM** and is **single-threaded**—a **2.3GB CSV ballooned to 7.2GB in memory** during a benchmark test, causing the OOM killer to terminate the process before completion. **The "Pandas cliff" occurs around tens of gigabytes**—beyond that, it doesn't just slow down, it dies. **Best for**: datasets under 10 million rows, exploration, and any project where the ecosystem's maturity outweighs performance.
 
-- **[Pandas](https://github.com/pandas-dev/pandas)**  
+- **[Apache Spark](https://github.com/apache/spark)** [![GitHub stars](https://img.shields.io/github/stars/apache/spark?style=social&color=white)](https://github.com/apache/spark/stargazers)  
+  **Unified analytics engine for large-scale data processing** (Apache-2.0) — **the industry standard for distributed computing**. Provides high-level APIs in Java, Scala, Python (PySpark), and R, alongside an optimized engine supporting general execution graphs, Spark SQL for structured queries, MLlib for machine learning, and structured streaming. **Best for**: multi-terabyte to petabyte datasets distributed across multi-node clusters.
 
-  **Flexible and powerful data analysis / manipulation library for Python** (BSD-3-Clause) — **the most widely used data manipulation library in the world**. **Key strengths**: **ubiquitous**—every data science tutorial starts with `import pandas as pd`; **rich ecosystem** (scikit-learn, matplotlib, seaborn all accept DataFrames); **full-featured** with merging, joining, grouping, pivoting, and time series . **The critical limitation**: **holds all data in RAM** and is **single-threaded**—a **2.3GB CSV ballooned to 7.2GB in memory** during a benchmark test, causing the OOM killer to terminate the process before completion . **The "Pandas cliff" occurs around tens of gigabytes**—beyond that, it doesn't just slow down, it dies . **Best for**: datasets under 10 million rows, exploration, and any project where the ecosystem's maturity outweighs performance .
+- **[DuckDB](https://github.com/duckdb/duckdb)** [![GitHub stars](https://img.shields.io/github/stars/duckdb/duckdb?style=social&color=white)](https://github.com/duckdb/duckdb/stargazers)  
+  **Feature-rich in-process SQL OLAP database** (MIT) — **"SQLite for analytics"**. **Key advantages**: **no external dependencies**, **vectorized SQL queries**, **parallel processing**, **spills to disk automatically when memory pressure rises**, and **queries Parquet/CSV files directly without loading them first**. **Benchmark**: a 2.3GB CSV query completed in **12 milliseconds with 0.4GB peak memory**—**18x less memory than Pandas**. **On the 1 Billion Row Challenge**, DuckDB finished in **5.19 seconds** vs. Pandas' **4 minutes 28 seconds**. **Unlike SQLite (OLTP-optimized), DuckDB is OLAP-optimized**—built for aggregate calculations across large numbers of rows. **Best for**: analytical scans, joins, and aggregations on local files; SQL-heavy workflows; and any "medium data" problem where a cluster is overkill.
 
+- **[Polars](https://github.com/pola-rs/polars)** [![GitHub stars](https://img.shields.io/github/stars/pola-rs/polars?style=social&color=white)](https://github.com/pola-rs/polars/stargazers)  
+  **Performance-focused, multi-threaded DataFrame library written in Rust** (MIT) — **the modern Pandas replacement for large data**. **Key advantages**: **lazy evaluation** (builds query plans, applies predicate pushdown, eliminates unused columns before execution), **Apache Arrow columnar format**, **multi-threaded by default**, and **streaming execution** for out-of-core processing. **Benchmark**: the same 2.3GB CSV that crashed Pandas completed in **8.7 seconds with 1.8GB peak memory**—**60% less memory and zero crashes**. **On the 1 Billion Row Challenge**, Polars finished in **5.04 seconds** vs. Pandas' **4 minutes 28 seconds**. **Requires strict schema definitions** but rewards with predictable performance. **Best for**: production ETL, datasets that don't fit in RAM, and any Python data workload where performance matters.
 
+- **[marimo](https://github.com/marimo-team/marimo)** [![GitHub stars](https://img.shields.io/github/stars/marimo-team/marimo?style=social&color=white)](https://github.com/marimo-team/marimo/stargazers)  
+  **Reactive, reproducible Python notebook designed for data analysis & manipulation** (Apache-2.0). Solves hidden state bugs inherent in legacy Jupyter notebooks by modeling cell relationships as a directed acyclic graph (DAG)—when a variable changes, all downstream dependent cells automatically re-run. Supports interactive dataframes with zero-code filtering/charting, embedded SQL queries on dataframes via DuckDB, and export to standalone web applications or production Python scripts. **Best for**: modern exploratory data analysis, interactive data apps, and reproducible analytical pipelines.
 
-- **[Polars](https://github.com/pola-rs/polars)**  
+- **[Apache Arrow](https://github.com/apache/arrow)** [![GitHub stars](https://img.shields.io/github/stars/apache/arrow?style=social&color=white)](https://github.com/apache/arrow/stargazers)  
+  **Universal columnar in-memory data standard and multi-language toolbox** (Apache-2.0). Provides zero-copy data interchange between disparate processing engines (Polars, DuckDB, Spark, PyTorch, Pandas 2.0). Features PyArrow compute kernels for ultra-fast in-memory record batch filtering, projected scans, and IPC streaming serialization. **Best for**: high-performance data interchange, foundational in-memory analytic pipelines, and eliminating serialization overhead.
 
-  **Performance-focused, multi-threaded DataFrame library written in Rust** (MIT) — **the modern Pandas replacement for large data**. **Key advantages**: **lazy evaluation** (builds query plans, applies predicate pushdown, eliminates unused columns before execution), **Apache Arrow columnar format**, **multi-threaded by default**, and **streaming execution** for out-of-core processing . **Benchmark**: the same 2.3GB CSV that crashed Pandas completed in **8.7 seconds with 1.8GB peak memory**—**60% less memory and zero crashes** . **On the 1 Billion Row Challenge**, Polars finished in **5.04 seconds** vs. Pandas' **4 minutes 28 seconds** . **Requires strict schema definitions** but rewards with predictable performance . **Best for**: production ETL, datasets that don't fit in RAM, and any Python data workload where performance matters .
+- **[dbt (data build tool)](https://github.com/dbt-labs/dbt-core)** [![GitHub stars](https://img.shields.io/github/stars/dbt-labs/dbt-core?style=social&color=white)](https://github.com/dbt-labs/dbt-core/stargazers)  
+  **Command-line tool for the transform step of ELT** (Apache-2.0) — **the analytics engineering standard**. Sits on top of data warehouses or lakehouse engines, managing data modeling, testing, version control, and documentation in a structured software engineering workflow. Uses standard modular SQL combined with Jinja templating. **Best for**: warehouse-native data transformation, DAG-based analytics models, and data lineage.
 
+- **[Dask](https://github.com/dask/dask)** [![GitHub stars](https://img.shields.io/github/stars/dask/dask?style=social&color=white)](https://github.com/dask/dask/stargazers)  
+  **Flexible parallel computing library for Python** (BSD-3-Clause). Dynamically coordinates task graphs across multicore machines and distributed clusters. Provides high-level `dask.dataframe` APIs that mimic Pandas while handling out-of-core streaming and parallel partition execution. Seamlessly integrates with NumPy, Scikit-Learn, and PyTorch. **Best for**: scaling existing Python/Pandas workflows to larger-than-memory datasets or distributed clusters.
 
+- **[OpenRefine](https://github.com/OpenRefine/OpenRefine)** [![GitHub stars](https://img.shields.io/github/stars/OpenRefine/OpenRefine?style=social&color=white)](https://github.com/OpenRefine/OpenRefine/stargazers)  
+  **Free and open-source data cleaning power tool** (BSD-3-Clause) — **the original data wrangling tool**. Runs locally in your browser with complete data privacy. Supports CSV, Excel, XML, and JSON. Features **GREL (General Refine Expression Language)** for algorithmic transformations, faceted browsing, clustering algorithms for fuzzy duplicate resolution, and schema reconciliation against external knowledge bases. **Best for**: cleaning messy tabular data, tabular normalization, and exploratory categorization.
 
-- **[DuckDB](https://github.com/duckdb/duckdb)**  
+- **[Great Expectations](https://github.com/great-expectations/great_expectations)** [![GitHub stars](https://img.shields.io/github/stars/great-expectations/great_expectations?style=social&color=white)](https://github.com/great-expectations/great_expectations/stargazers)  
+  **Shared, open standard for data quality and pipeline validation** (Apache-2.0). Allows data analysts and engineers to assert expected schemas, distributions, ranges, and null counts across Pandas, Spark, and SQL databases. Generates human-readable automated documentation (Data Docs). **Best for**: automated unit testing for data pipelines, ETL validation gates, and data quality monitoring.
 
-  **Feature-rich in-process SQL OLAP database** (MIT) — **"SQLite for analytics"** . **Key advantages**: **no external dependencies**, **vectorized SQL queries**, **parallel processing**, **spills to disk automatically when memory pressure rises**, and **queries Parquet/CSV files directly without loading them first** . **Benchmark**: the 2.3GB CSV query completed in **12 milliseconds with 0.4GB peak memory**—**18x less memory than Pandas** . **On the 1 Billion Row Challenge**, DuckDB finished in **5.19 seconds** vs. Pandas' **4 minutes 28 seconds** . **Unlike SQLite (OLTP-optimized), DuckDB is OLAP-optimized**—built for aggregate calculations across large numbers of rows . **Best for**: analytical scans, joins, and aggregations on local files; SQL-heavy workflows; and any "medium data" problem where a cluster is overkill .
+- **[Datasette](https://github.com/simonw/datasette)** [![GitHub stars](https://img.shields.io/github/stars/simonw/datasette?style=social&color=white)](https://github.com/simonw/datasette/stargazers)  
+  **Open-source multi-tool for exploring, querying, and publishing data** (Apache-2.0). Instantly turns SQLite databases, CSVs, and parquet files into interactive web exploratory dashboards and JSON/CSV APIs. Rich plugin ecosystem enables geospatial mapping, full-text faceted searching, and custom visualizations with zero boilerplate. **Best for**: rapid data exploration, publishing curated datasets, and self-service ad-hoc querying.
 
+- **[Modin](https://github.com/modin-project/modin)** [![GitHub stars](https://img.shields.io/github/stars/modin-project/modin?style=social&color=white)](https://github.com/modin-project/modin/stargazers)  
+  **Scale your Pandas workflows by changing a single line of code** (Apache-2.0). Drop-in Pandas replacement (`import modin.pandas as pd`) powered by Ray or Dask backends. Automatically distributes DataFrame computations across all available CPU cores without requiring manual partition tuning. **Best for**: accelerating existing legacy Pandas codebases without refactoring API calls.
 
+- **[Mage](https://github.com/mage-ai/mage-ai)** [![GitHub stars](https://img.shields.io/github/stars/mage-ai/mage-ai?style=social&color=white)](https://github.com/mage-ai/mage-ai/stargazers)  
+  **Open-source data pipeline tool for transforming and integrating data** (Apache-2.0). Modern visual and code-based developer experience combining interactive notebooks with production DAG scheduling. Allows writing modular SQL, Python, and R code blocks with instant inline data preview, automated data profiling, and version control. **Best for**: building end-to-end transformation pipelines with an intuitive developer interface.
 
-- **[Loomflow](https://github.com/cardchase/loomflow)**  
+- **[Vaex](https://github.com/vaexio/vaex)** [![GitHub stars](https://img.shields.io/github/stars/vaexio/vaex?style=social&color=white)](https://github.com/vaexio/vaex/stargazers)  
+  **Out-of-core DataFrames for Python** (MIT). Capable of visualizing and processing tabular datasets with over a billion rows at 0-memory usage via memory mapping (mmap) on HDF5, Arrow, and Parquet files. Computes aggregations, filtering, and statistical summaries in milliseconds without copying memory. **Best for**: massive single-node exploration, billion-row data visualization, and statistical modeling.
 
-  **Self-hosted, lightweight, visual ETL platform inspired by Alteryx** (open-source) — **the open-source Alteryx alternative** . **Features**: **Alteryx-inspired configuration panels** with spreadsheet-like tabular grids for managing hundreds of columns, **tool containers** for grouping and bypassing logic, **multi-rule sorting and summarization** powered by a **native Polars backend**, **semantic type profiling** (detects `currency_usd`, `percentage`, `email` and propagates metadata through the DAG), **agent-ready architecture** (export workflows to YAML for AI orchestration), **Gemini AI node** for extracting data from text/images/video/audio, **built-in Python IDE** with column-aware autocompletion, **multi-tabbed workspaces** for parallel DAGs, **flexible I/O** (CSV, Excel, Word, PDF, SQLite, Access), and **global cloud integrations** (Google Cloud, OAuth) . **The most feature-complete open-source visual ETL platform available**.
+- **[Ibis](https://github.com/ibis-project/ibis)** [![GitHub stars](https://img.shields.io/github/stars/ibis-project/ibis?style=social&color=white)](https://github.com/ibis-project/ibis/stargazers)  
+  **Python dataframe interface that compiles to any backend** (Apache-2.0) — **write once, execute anywhere**. Provides a uniform, expressive Pythonic API that compiles directly into high-performance SQL or native queries across 20+ backends including DuckDB, BigQuery, Snowflake, ClickHouse, PostgreSQL, PySpark, and Polars. **Best for**: writing backend-agnostic analytics pipelines that can execute locally or run inside a remote data warehouse.
 
+- **[Daft](https://github.com/Eventual-Inc/Daft)** [![GitHub stars](https://img.shields.io/github/stars/Eventual-Inc/Daft?style=social&color=white)](https://github.com/Eventual-Inc/Daft/stargazers)  
+  **Distributed query engine and DataFrame library built in Rust for multimodal data** (Apache-2.0). Unifies tabular data processing with multimodal inputs (images, audio, video, nested documents, embeddings) under an Arrow memory model and lazy query optimizer. Offers Polars-like ergonomics with Ray-powered distributed cluster execution. **Best for**: high-throughput multimodal ETL and feature engineering for AI/ML pipelines.
 
+- **[Rill](https://github.com/rilldata/rill)** [![GitHub stars](https://img.shields.io/github/stars/rilldata/rill?style=social&color=white)](https://github.com/rilldata/rill/stargazers)  
+  **Fast, open-source BI and real-time operational analytics tool powered by DuckDB and ClickHouse** (Apache-2.0). Connects directly to local Parquet/CSV files or cloud object stores, modeling data via code-driven YAML and SQL metrics definitions with sub-second exploratory dashboards. **Best for**: local-first fast metrics exploration, fast BI over data lakes, and dimensional analysis.
 
-- **[Amphi](https://github.com/amphi-ai/amphi)**  
+- **[Fugue](https://github.com/fugue-project/fugue)** [![GitHub stars](https://img.shields.io/github/stars/fugue-project/fugue?style=social&color=white)](https://github.com/fugue-project/fugue/stargazers)  
+  **Unified interface for distributed computing** (Apache-2.0). Lets developers execute native Python, Pandas, and SQL code across Spark, Dask, and Ray without rewriting framework-specific logic. Simplifies distributed execution by abstracting cluster orchestration boilerplate. **Best for**: seamless portability between local prototyping and distributed production execution.
 
-  **Free and source-available visual data transformation tool based on Python** (open-source) — **the low-code tool that generates native Python code** . **Key differentiator**: **generates pandas and DuckDB code that you can export and run anywhere**—unlike Alteryx or KNIME, Amphi doesn't lock workflows into a proprietary format. **Supports any Python library** and **custom code integration directly into the pipeline**. **Available as standalone app or JupyterLab extension** . **Best for**: teams wanting visual building without sacrificing code portability.
+- **[Amphi](https://github.com/amphi-ai/amphi-etl)** [![GitHub stars](https://img.shields.io/github/stars/amphi-ai/amphi-etl?style=social&color=white)](https://github.com/amphi-ai/amphi-etl/stargazers)  
+  **Visual, low-code data preparation and transformation workbench based on Python** (source-available/open-source) — **the open visual ETL tool that generates native Python code**. Bridges the gap between drag-and-drop tools like Alteryx/KNIME and code-first engineering by generating clean, exportable Pandas and DuckDB code. Features LLM integrations for AI-assisted transformations and runs entirely locally. **Best for**: teams seeking visual ETL ease without vendor lock-in or proprietary runtimes.
 
+- **[Loomflow](https://github.com/cardchase/loomflow)** [![GitHub stars](https://img.shields.io/github/stars/cardchase/loomflow?style=social&color=white)](https://github.com/cardchase/loomflow/stargazers)  
+  **Self-hosted, lightweight, visual ETL platform inspired by Alteryx** (open-source) — **the open-source Alteryx alternative**. Features Alteryx-inspired configuration panels with tabular grids for managing hundreds of columns, tool containers for grouping/bypassing logic, multi-rule sorting and summarization powered by a native Polars backend, semantic type profiling, agent-ready YAML workflow exports, and an integrated Python IDE. **Best for**: teams looking for a visual Alteryx replacement backed by modern high-speed execution engines.
 
+### Frameworks & Ecosystem Utilities
 
-- **[OpenRefine](https://github.com/OpenRefine/OpenRefine)**  
+- **[tidysheet](https://pypi.org/project/tidysheet/)** — Local-first data profiling and reproducible cleaning tool. Profiles messy CSV/Excel/Parquet files, generates human-auditable YAML cleaning pipelines executed via DuckDB, and reverse-engineers cleaning scripts directly from Excel edits.
+- **[Hermes](https://pypi.org/project/hermes-plt/)** — Local-first data provenance, lineage, and entity resolution framework designed to work seamlessly on top of Pandas, Polars, PyArrow, and DuckDB.
 
-  **Free and open-source data cleaning tool** (BSD-3-Clause) — **the original data wrangling tool** . **Runs as a local web application**—data never leaves your machine. **Supports CSV, Excel, JSON, and more**. Features **GREL (General Refine Expression Language)** for programmatic transformations, **faceted browsing** for exploring data, **clustering algorithms** for finding near-duplicate values, and **reconciliation** against external knowledge bases . **Best for**: cleaning messy spreadsheets and exploring unfamiliar datasets.
-
-
-
-- **[Ibis](https://github.com/ibis-project/ibis)**  
-
-  **Python data-frame interface that works on top of any backend** (Apache-2.0) — **write once, run anywhere** . **Supports BigQuery, MySQL, PostgreSQL, pandas, DuckDB, ClickHouse, PySpark, Snowflake, SQLite, and more**. **Can use both its own object-oriented interface (similar to pandas) and standard SQL interchangeably** . **Best for**: teams that want a consistent Python API across multiple data backends without rewriting pipelines.
-
-
-
-- **[dbt (data build tool)](https://github.com/dbt-labs/dbt-core)**  
-
-  **Command-line tool for the transform step of ELT** (Apache-2.0) — **the analytics engineering standard** . **Sits on top of a data warehouse**, managing data modeling, testing, and documentation in a predefined workflow. **Data manipulation via SQL with Jinja templating** . **The de facto standard for warehouse-native transformations**.
-
-
-
-- **[tidysheet](https://pypi.org/project/tidysheet/)**  
-
-  **Local-first data profiling and cleaning with reproducible, exportable pipelines** (open-source) — **the reproducible cleaning tool** . **Point it at a messy CSV/Excel/Parquet/JSON file**: it profiles the data, proposes a cleaning pipeline you review as plain YAML, runs it on **DuckDB**, and exports the whole thing as **standalone pandas, Polars, or SQL code you own**. **Data never leaves your machine**. **`infer` command reverse-engineers a pipeline from a hand-edited Excel file**—clean however you like, then let tidysheet reproduce the steps . **Best for**: teams wanting auditable, reproducible cleaning pipelines.
-
-
-
-- **[Hermes](https://pypi.org/project/hermes-plt/)**  
-
-  **Pipeline layer around existing data tools** (open-source) — **the provenance-first data framework** . **Designed to work with Pandas, Polars, PyArrow, DuckDB, NumPy, Parquet, SQL databases, and ML frameworks**—not replace them. **Features**: **entity resolution** (connect `Apple Inc.`, `Apple Computer Inc.`, and `AAPL` to a canonical entity), **dataset versioning** (`snapshot()`, `version()`, `diff()`), **provenance tracking** (every dataset answers "where did this come from?"), and **lineage recording** . **Local-first**—`pip install hermes-plt` and start working immediately, no cloud account required . **Best for**: teams needing auditable, reproducible data pipelines with lineage.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **[Modin](https://github.com/modin-project/modin)** — Drop-in Pandas replacement that scales to multiple cores and clusters (Apache-2.0) . **Change the import statement, keep your code**  . **Best for**: existing Pandas codebases needing speed without rewrites.
-
-- **[Fugue](https://github.com/fugue-project/fugue)** — Unified interface for distributed computing (Apache-2.0) . **Execute Python, pandas, and SQL code on Spark and Dask with minimal rewrites**—switch engines by changing one variable  . **Best for**: teams wanting portability across compute engines.
-
-- **[Daft](https://github.com/Eventual-Inc/Daft)** — Distributed DataFrame for Python and Rust (Apache-2.0) . **Polars-like expressiveness with Spark-like distribution**  .
-
-- **[Great Expectations](https://github.com/great-expectations/great_expectations)** — Data quality and testing framework (Apache-2.0) . **The standard for pipeline validation**  .
-
-- **[Datasette](https://github.com/simonw/datasette)** — Low-code tool for exploring and publishing data (Apache-2.0) . **The fastest way to explore a SQLite database**  .
-
-- Community **n8n** workflows for data pipeline orchestration and transformation alerting.
-
-
-
-**Frameworks for building custom systems**: Combine **Polars** for high-performance DataFrame operations with **DuckDB** for SQL-heavy analytics, **Loomflow** or **Amphi** for visual pipeline building, **dbt** for warehouse transformations, and **Hermes** for provenance and lineage—creating a comprehensive data analysis and manipulation stack that handles everything from exploration to production.
-
-
+**Frameworks for building custom systems**: Combine **Polars** or **Apache Spark** for high-performance DataFrame operations with **DuckDB** for SQL-heavy analytics, **Loomflow** or **Amphi** for visual pipeline building, **dbt** for warehouse transformations, **Great Expectations** for validation, and **Hermes** for provenance and lineage—creating a comprehensive data analysis and manipulation stack that handles everything from exploration to production.
 
 ## How to Contribute
 

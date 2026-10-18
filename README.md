@@ -30,79 +30,30 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
 - [How to Contribute](#how-to-contribute)
-
 - [Disclaimer](#disclaimer)
 
+## Sector Overview & Market Dynamics
 
+The global data preparation and manipulation software market is estimated at **$7.6B to $10.0B** in 2024–2026, compounding at a **15%–16% CAGR** driven by enterprise AI pipeline demands and data pipeline automation. The sector is **moderately fragmented**—dominated at the top by hyper-scalers and mega-cap enterprise analytics suites (AWS, Salesforce/Tableau, Workday, Databricks), yet continually disrupted by agile standalone visual ETL tools, modular lakehouse components, and fast-growing open-source ecosystems.
 
 ## SaaS/Hosted Platforms
 
-
-
-- **Alteryx**  
-
-  The enterprise standard for visual data preparation and analytics. Features **drag-and-drop workflow builder**, **hundreds of pre-built tools**, **spatial analytics**, and **predictive modeling**. **The benchmark that open-source alternatives like Loomflow and Amphi explicitly target** . Pricing starts around **$5,000/year per user**—a barrier that has driven significant migration to open-source tools.
-
-
-
-- **KNIME**  
-
-  Open-core analytics platform with visual workflows and a free desktop version. **The most accessible commercial-adjacent option**—the free tier is genuinely usable, with paid server and team features. Features **extensive node library**, **integration with Python/R/JavaScript**, and **database connectivity**.
-
-
-
-- **Dataiku**  
-
-  Enterprise AI and analytics platform with visual data preparation, machine learning, and deployment. Features **no-code, low-code, and full-code interfaces** in one platform.
-
-
-
-- **Trifacta (Alteryx)**  
-
-  Cloud data preparation platform acquired by Alteryx. Features **machine-learning-assisted wrangling**, **visual transformation suggestions**, and **integration with major cloud warehouses**.
-
-
-
-- **Talend**  
-
-  Enterprise data integration and transformation platform. Features **visual ETL/ELT**, **data quality**, and **API services**. **The enterprise standard for data integration pipelines**.
-
-
-
-- **RapidMiner**  
-
-  Data science platform with visual workflows for data preparation, modeling, and deployment.
-
-
-
-- **Databricks**  
-
-  Lakehouse platform built on Apache Spark. Features **notebooks**, **SQL analytics**, **Delta Lake**, and **MLflow**. **The enterprise standard for large-scale data engineering and ML**—but overkill for the "medium data" problems most teams actually have .
-
-
-
-- **AWS Glue DataBrew**  
-
-  Visual data preparation service on AWS. Features **250+ pre-built transformations**, **data profiling**, and **integration with Glue and S3**.
-
-
-
-- **Tableau Prep**  
-
-  Visual data preparation tool integrated with Tableau. Features **visual workflow builder**, **data profiling**, and **direct connection to Tableau Desktop**.
-
-
-
-- **Paxata (Workday)**  
-
-  Self-service data preparation platform acquired by Workday. Features **visual transformation**, **data quality**, and **collaboration**.
-
-
+| Product | Company Size (Valuation / Revenue) | Starting Tier Pricing | Free Tier / Free Trial Limits | Description & Core Strengths |
+| :--- | :--- | :--- | :--- | :--- |
+| **AWS Glue DataBrew** | **~$2.1T+ Market Cap** (Amazon parent; AWS >$105B run-rate) | **$1.00 / interactive session** (30 min) + $0.48 / node-hour for batch jobs | **First 40 interactive sessions free** for first-time users (30-min blocks); Glue Catalog includes 1M free metadata objects/month | Cloud-native visual data preparation service featuring 250+ pre-built transformations, automated profiling, and native S3/Glue lakehouse integration. |
+| **Tableau Prep** (Salesforce) | **~$280B Market Cap** (Salesforce parent; Tableau acquired for $15.7B) | **$75 / user/month** ($900/year, Tableau Creator tier) | **14-day free trial** with unrestricted Creator features (Tableau Prep Builder + Desktop + Server/Cloud authoring); no credit card required | Visual pipeline designer for profiling, cleaning, and joining multi-source data; natively publishes extracts directly into Tableau dashboards. |
+| **Paxata** (Workday) | **~$70B Market Cap** (Workday parent; acquired Paxata for ~$250M) | Custom enterprise quote (starts at **~$20,000 / year**) | **14-day trial on request** (custom POC/demo environment scoped to specific evaluation datasets; no permanent free plan) | Enterprise self-service data preparation offering automated column profiling, ML-assisted joins, and governance embedded into Workday. |
+| **Databricks** | **$43B Valuation** (private; >$2.6B ARR) | **$0.07 / DBU** (Model Serving/Jobs) to $0.40–$0.70 / DBU (Interactive & Serverless SQL) | **14-day free trial with $400 credits** (Serverless SQL capped at 50 DBU/hr); separate Free Edition offers permanent single-cluster serverless notebooks with daily fair usage limits | Unified Lakehouse analytics platform built on Spark, Delta Lake, and MLflow; industry standard for high-throughput enterprise batch and streaming ETL. |
+| **Alteryx** | **$4.4B Acquisition Valuation** (acquired by Clearlake & Insight, 2024; ~$950M revenue) | **$250 / user/month** ($3,000/year billed annually, Starter Edition); Designer Desktop at ~$4,950–$5,195/user/year | **30-day free trial** for Alteryx Designer (full access to desktop workflow designer and spatial tools; no permanent free plan) | Benchmark visual workflow platform providing drag-and-drop spatial analytics, data prep, predictive modeling, and extensive ecosystem connectors. |
+| **Dataiku** | **$3.7B Valuation** (private; ~$250M+ ARR) | Starts at **~$4,000 / month** (~$48,000–$60,000/year for enterprise cloud deployment) | **Free Edition: Permanent free tier** for up to 3 users (self-hosted local install); or **14-day cloud trial** with 4 vCPUs / 32 GiB memory | Collaborative AI and analytics platform uniting no-code drag-and-drop wrangling, SQL recipes, and Python/R notebooks in a single governed pipeline. |
+| **Talend** (Qlik) | **$2.4B Acquisition Valuation** (acquired by Thoma Bravo, now integrated into Qlik) | **$100 / month** (Talend Stitch standard tier, covers up to 5M rows/month) | **14-day free trial** with unlimited row replication and full connector access; includes 7-day grace period for new data source historical syncs | Comprehensive enterprise data integration, transformation, and data quality framework spanning visual ETL, CDC, and automated governance. |
+| **Altair RapidMiner** | **$1.8B Valuation** (Altair parent; RapidMiner acquired for ~$100M) | Commercial licenses start at **~$2,500 / user/year** (licensed via Altair Units) | **Free tier: 10,000 data rows max** per dataset in RapidMiner Studio Free; 30-day trial for enterprise AI Studio; free unlimited for verified students/academics | Visual workflow designer covering data extraction, preparation, predictive model training, and automated data science pipelines. |
+| **Trifacta** (Alteryx) | **~$400M Acquisition Valuation** (acquired by Alteryx in 2022) | Starts at **$80 / user/month** (Trifacta Starter Cloud edition) | **30-day free trial** of Trifacta Cloud with ML-guided wrangling and warehouse connector evaluation; no permanent free plan | Cloud-native data wrangling platform pioneering machine-learning-assisted transformation recommendations across modern cloud data warehouses. |
+| **KNIME** | **~$100M Valuation** (privately funded; ~$30M ARR) | **$99 / month** (KNIME Community Hub Team Plan, includes 3 members; +$49/mo per extra user) | **Free forever desktop version** (KNIME Analytics Platform: unrestricted nodes, local execution, unlimited rows, Python/R integration) | Open-core visual analytics suite with thousands of nodes, database connectors, and seamless scripting bridges for local or collaborative team ETL. |
 
 ## Open-Source GitHub Projects
 

@@ -62,7 +62,7 @@ The global data preparation and manipulation software market is estimated at **$
 
 ## ⚡ Open-Source GitHub Projects
 
-Curated open-source repositories for data analysis, transformation, in-memory compute, and visual pipelines—ranked by GitHub Stars_Count:
+Curated open-source repositories for data analysis, transformation, in-memory compute, and visual pipelines—ranked by GitHub_Stars_Count:
 
 - **[Pandas](https://github.com/pandas-dev/pandas)** [![GitHub_Stars](https://img.shields.io/github/stars/pandas-dev/pandas?style=social&color=white)](https://github.com/pandas-dev/pandas/stargazers)  
   **Flexible and powerful data analysis / manipulation library for Python** (BSD-3-Clause) — **the most widely used data manipulation library in the world**. **Key strengths**: **ubiquitous**—every data science tutorial starts with `import pandas as pd`; **rich ecosystem** (scikit-learn, matplotlib, seaborn all accept DataFrames); **full-featured** with merging, joining, grouping, pivoting, and time series. **The critical limitation**: **holds all data in RAM** and is **single-threaded**—a **2.3GB CSV ballooned to 7.2GB in memory** during a benchmark test, causing the OOM killer to terminate the process before completion. **The "Pandas cliff" occurs around tens of gigabytes**—beyond that, it doesn't just slow down, it dies. **Best for**: datasets under 10 million rows, exploration, and any project where the ecosystem's maturity outweighs performance.
